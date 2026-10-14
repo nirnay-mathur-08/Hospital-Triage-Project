@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F9FC"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🏥 AI Triage Diagnosis System"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#1A202C"
+            android:gravity="center"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter patient baseline statistics to test urgency."
+            android:textSize="14sp"
+            android:textColor="#718096"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Demographics Section -->
+        <EditText
+            android:id="@+id/etAge"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Age"
+            android:inputType="number"
+            android:background="@android:drawable/editbox_background"
+            android:layout_marginBottom="12dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender:"
+            android:textColor="#4A5568"
+            android:layout_marginBottom="4dp"/>
+
+        <Spinner
+            android:id="@+id/spGender"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/gender_array"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Primary Symptom:"
+            android:textColor="#4A5568"
+            android:layout_marginBottom="4dp"/>
+
+        <Spinner
+            android:id="@+id/spSymptom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/symptom_array"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Vital Signs Vitals Form -->
+        <EditText
+            android:id="@+id/etHeartRate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Heart Rate (BPM)"
+            android:inputType="number"
+            android:background="@android:drawable/editbox_background"
+            android:layout_marginBottom="12dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"/>
+
+        <EditText
+            android:id="@+id/etSystolic"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Systolic BP (mmHg)"
+            android:inputType="number"
+            android:background="@android:drawable/editbox_background"
+            android:layout_marginBottom="12dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"/>
+
+        <EditText
+            android:id="@+id/etDiastolic"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Diastolic BP (mmHg)"
+            android:inputType="number"
+            android:background="@android:drawable/editbox_background"
+            android:layout_marginBottom="12dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"/>
+
+        <EditText
+            android:id="@+id/etTemp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Temperature (°F)"
+            android:inputType="numberDecimal"
+            android:background="@android:drawable/editbox_background"
+            android:layout_marginBottom="12dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"/>
+
+        <EditText
+            android:id="@+id/etSpO2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Oxygen Saturation (SpO2 %)"
+            android:inputType="number"
+            android:background="@android:drawable/editbox_background"
+            android:layout_marginBottom="24dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"/>
+
+        <!-- Action Button -->
+        <Button
+            android:id="@+id/btnPredict"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Run AI Triage Prediction"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#3182CE"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Diagnostic Output Panel Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:padding="16dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvResultHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DIAGNOSTIC ANALYSIS REPORT"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#A0AEC0"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tvRiskResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Waiting for Input Data..."
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#4A5568"
+                android:gravity="center"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The core application display tag -->
+    <string name="app_name">AI Triage App</string>
+
+    <!-- Corrected Gender array pairing entries -->
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <!-- Primary clinical baseline symptoms -->
+    <string-array name="symptom_array">
+        <item>Chest Pain</item>
+        <item>Fever</item>
+        <item>Cough</item>
+        <item>Shortness of Breath</item>
+        <item>Abdominal Pain</item>
+        <item>Headache</item>
+    </string-array>
+</resources>
